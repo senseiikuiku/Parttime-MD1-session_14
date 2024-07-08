@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài 6</title>
+    </head>
+    <body>
+        <script>
+            var string = prompt("Nhập chuỗi bất kỳ: ");
+            document.write(string+`<br>`)
+            function check(string) {
+                var word = string.split(" ");
+                for(var i =0;i<word.length;i++)
+                    word[i]=word[i].charAt(0).toUpperCase()+word[i].slice(1)
+                return word.join(" ")
+            }
+            var kq = check(string);
+             document.write("Chuỗi sau khi viết hoa chữ cái đầu: " + kq);
+        </script>
+    </body>
+</html>

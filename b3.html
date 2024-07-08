@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài 3</title>
+    </head>
+    <body>
+        <script>
+            var string = prompt("Nhập chuỗi bất kỳ: ");
+            function check(string) {
+                var count = 0;
+                for (var i = 0; i < string.length; i++)
+                    if (string[i] != " ") {
+                        count++;
+                    }
+                return count;
+            }
+            var kq = check(string);
+            document.write(string + " có " + kq + " kí tự!");
+        </script>
+    </body>
+</html>

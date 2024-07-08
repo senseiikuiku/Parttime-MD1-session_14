@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài 4</title>
+    </head>
+    <body>
+        <script>
+            var string = prompt("Nhập chuỗi bất kỳ: ");
+            var x = prompt("Nhập kí tự bất kì: ");
+            function check(string, x) {
+                var count = 0;
+                for (var i = 0; i < string.length; i++)
+                    if (string[i] == x) {
+                        count++;
+                    }
+                return count;
+            }
+            var kq = check(string, x);
+            document.write(
+                string + " có " + kq + " kí tự trùng lặp " + x + "!"
+            );
+        </script>
+    </body>
+</html>

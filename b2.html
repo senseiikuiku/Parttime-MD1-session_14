@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài 2</title>
+    </head>
+    <body>
+        <script>
+            var n = parseInt(prompt("Nhập số phần tử: "));
+            var arr = [];
+            for (var i = 0; i < n; ++i)
+                arr[i] = prompt("Nhập phần tử số " + i + ": ");
+            for (var num = 0; num < arr.length; ++num)
+                document.write(arr[num] + (num < arr.length - 1 ? ", " : ""));
+            document.write(`<br>`);
+            function check(arr) {
+                max = 0;
+                elementMax = arr[0];
+                for (var i = 0; i < arr.length; ++i)
+                    if (arr[i].length > max) {
+                        max = arr[i].length;
+                        elementMax = arr[i];
+                    }
+                return elementMax;
+            }
+            var kq = check(arr)
+            document.write(kq + " là phần tử dài nhất!")
+        </script>
+    </body>
+</html>

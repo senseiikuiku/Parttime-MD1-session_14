@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài 5</title>
+    </head>
+    <body>
+        <script>
+            var n = parseInt(prompt("Nhập số phần tử: "));
+            var arr = [];
+            for (var i = 0; i < n; ++i)
+                arr[i] = prompt("Nhập phần tử số " + i + ": ");
+            for (var num = 0; num < arr.length; ++num)
+                document.write(arr[num] + (num < arr.length - 1 ? ", " : ""));
+            document.write(`<br>`);
+            var x = prompt("Nhập kí tự bất kì: ");
+            function check(arr, x) {
+                var result = [];
+                for (var i = 0; i < arr.length; i++) {
+                    if (arr[i].includes(x)) result.push(arr[i]);
+                }
+                return result;
+            }
+            var kq = check(arr, x);
+            document.write(
+                "Nhập chuỗi bất kì: " + x + " => kết quả: [" + kq + "]"
+            );
+        </script>
+    </body>
+</html>
